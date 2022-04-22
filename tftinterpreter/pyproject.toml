@@ -1,0 +1,52 @@
+[tool.briefcase]
+project_name = "TFT Interpreter"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://github.com/BrianHotopp/beeware-interpreter"
+license = "Other"
+author = 'Brian Hotopp'
+author_email = "brihoto@gmail.com"
+
+[tool.briefcase.app.tftinterpreter]
+formal_name = "TFT Interpreter"
+description = "TFT Assistant"
+icon = "src/tftinterpreter/resources/tftinterpreter"
+sources = ['src/tftinterpreter']
+requires = [
+]
+
+
+[tool.briefcase.app.tftinterpreter.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev32',
+    'std-nslog==1.0.0'
+]
+
+[tool.briefcase.app.tftinterpreter.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev32',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.tftinterpreter.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev32',
+]
+
+# Mobile deployments
+[tool.briefcase.app.tftinterpreter.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev32',
+    'std-nslog==1.0.0'
+]
+
+[tool.briefcase.app.tftinterpreter.android]
+requires = [
+    'toga-android>=0.3.0.dev32'
+]
